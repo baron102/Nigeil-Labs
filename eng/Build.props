@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Specify the solutions to build. Add all new solutions/projects here as necessary or the main build won't build them! -->
+  <ItemGroup>
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\ComponentsElectron\ComponentsElectron.sln" />
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\DotNetDiagnostics\dotnet-monitor.sln" />
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\GrpcHttpApi\GrpcHttpApi.sln" />
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\Proxy\Proxy.sln" />
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\WebHooks\WebHooks.sln" />
+    <ProjectToBuild Include="$(MSBuildThisFileDirectory)..\src\Components.Web.Extensions\Microsoft.AspNetCore.Components.Web.Extensions.csproj" />
+  </ItemGroup>
+</Project>

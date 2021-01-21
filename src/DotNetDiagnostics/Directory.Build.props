@@ -1,0 +1,13 @@
+<Project>
+    <!-- Chain up to the next file (can be copy-pasted to either Directory.Build.props or Directory.Build.targets) -->
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory).., '$(MSBuildThisFileName)$(MSBuildThisFileExtension)'))\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+    <PropertyGroup>
+        <RestoreSources>
+          $(RestoreSources);
+          http://api.nuget.org/v3/index.json;
+          https://www.myget.org/F/anurse-clrmd/api/v3/index.json
+        </RestoreSources>
+        <IsShipping>false</IsShipping>
+    </PropertyGroup>
+</Project>
